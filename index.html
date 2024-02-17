@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,159 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+        <style>
+
+            .anton-regular {
+            font-family: "Anton", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            }
+
+            .poppins-light {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            }
+
+            .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            }
+
+            
+            .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            }
+
+            .poppins-bold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            }
+
+            .poppins-extrabold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            }
+
+            .poppins-black {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            }
+
+        </style>
+        <script src="alpha-clash.js"></script>
+
 </head>
-<body>
+<body class="font-poppins-reguler">
+   <main class=" min-h-screen bg-no-repeat bg-center bg-[#010313] bg-[url(images/background.png)]">
+
+    <!-- Home screen -->
+    <section id="home-screen" class="  home text-white flex justify-center min-h-screen  items-center ">
+        <div class="flex flex-col items-center justify-center gap-8">
+            <h1 class="text-8xl font-poppins-extrabold">Alpha Clash pro</h1>
+            <p>Unleash your keyboard kung fu: Press "Enter to start"</p>
+            <button onclick="play()" id="crossorigin" class="btn bg-white text-black" >Play now</button>
+        </div>
+    </section>
+
+    <!-- play-ground -->
+    <section id="play-ground" class=" hidden ">
+        <!-- playground container -->
+        <div class=" flex flex-col min-h-screenjustify-center items-center pt-40">
+            <!-- Screen -->
+            <div class=" mb-5 artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] lg:border-[#010313CC] rounded-2xl bg-[#FFFFFFB3]">
+
+                <div class="flex justify-center ">
+                    <p class="bg-[#2F2941] p-4 ">Dont watch keyboard while playing</p>
+                </div>
+                <div class="flex justify-center items-center h-full ">
+                    <p id="currentAlphabet" class="text-black text-8xl font-bold pb-24">y</p>
+                </div>
+            </div>
+            <!-- keyboar -->
+            <!-- keyboard start -->
+            <div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="q"class="kbd bg-white text-black font-bold ">q</kbd>
+                    <kbd id="w"class="kbd bg-white text-black font-bold">w</kbd>
+                    <kbd id="e"class="kbd bg-white text-black font-bold">e</kbd>
+                    <kbd id="r"class="kbd bg-white text-black font-bold">r</kbd>
+                    <kbd id="t"class="kbd bg-white text-black font-bold">t</kbd>
+                    <kbd id="y"class="kbd bg-white text-black font-bold">y</kbd>
+                    <kbd id="u"class="kbd bg-white text-black font-bold">u</kbd>
+                    <kbd id="i"class="kbd bg-white text-black font-bold">i</kbd>
+                    <kbd id="o"class="kbd bg-white text-black font-bold">o</kbd>
+                    <kbd id="p"class="kbd bg-white text-black font-bold">p</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="a" class="kbd bg-white text-black font-bold">a</kbd>
+                    <kbd id="s" class="kbd bg-white text-black font-bold">s</kbd>
+                    <kbd id="d" class="kbd bg-white text-black font-bold">d</kbd>
+                    <kbd id="f" class="kbd bg-white text-black font-bold">f</kbd>
+                    <kbd id="g" class="kbd bg-white text-black font-bold">g</kbd>
+                    <kbd id="h" class="kbd bg-white text-black font-bold">h</kbd>
+                    <kbd id="j" class="kbd bg-white text-black font-bold">j</kbd>
+                    <kbd id="k" class="kbd bg-white text-black font-bold">k</kbd>
+                    <kbd id="l" class="kbd bg-white text-black font-bold">l</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="z" class="kbd bg-white text-black font-bold">z</kbd>
+                    <kbd id="x" class="kbd bg-white text-black font-bold">x</kbd>
+                    <kbd id="c" class="kbd bg-white text-black font-bold">c</kbd>
+                    <kbd id="v" class="kbd bg-white text-black font-bold">v</kbd>
+                    <kbd id="b" class="kbd bg-white text-black font-bold">b</kbd>
+                    <kbd id="n" class="kbd bg-white text-black font-bold">n</kbd>
+                    <kbd id="m" class="kbd bg-white text-black font-bold">m</kbd>
+                    <kbd id="/" class="kbd bg-white text-black font-bold">/</kbd>
+                </div>
+            </div>
+            <!-- keyboard end -->
+            <!-- lifeline/screen -->
+            <div class=" mt-5 flex w-full justify-around">
+                <button class="btn bg-purple-600 rounded-full border-white px-4 ">
+                   <img src="images/Group 23 (1).svg" alt="">
+                   Life
+                   <span id="life">5</span>
+                </button>
+
+                <button class="btn  flex rounded-full bg-purple-600 border-white px-4">
+                   <img src="images/$.svg" alt="">
+                    score
+                    <span id="score">0</span>
+                </button>
+            </div>
+        </div>
     
+    </section>
+
+    <!-- playground end -->
+    <section id="End" class="score flex justify-center items-center min-h-screen hidden">
+        <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+            <h1 class="text-5xl">Game over !</h1>
+            <h1 class="text-8xl">
+                <span class="font-extrabold">Score:</span>
+                <span id="final-score">14</span>
+            </h1>
+            <button onclick="play()" id="crossorigin" class="btn bg-white text-black border-none">Play now</button>
+            <p>Practice will make you a Pro</p>
+        </div>
+    </section>
+   </main>
 </body>
 </html>
